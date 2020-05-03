@@ -1,0 +1,2 @@
+rootProject.name='WebViewVideo'
+include ':app'

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="js/dsbridge.js"> </script>
+</head>
+<body>
+<div id="test">
+    <video src="movie/movie.mp4" controls="controls" id="my-video">
+        您的浏览器不支持 video 标签。
+    </video>
+    <br/>
+    自定义播放器自己设置全屏
+    <button onclick="setFullScreen()">全屏</button>
+</div>
+<script type="text/javascript">
+    function setFullScreen() {
+         dsBridge.call("setFullScreen", "setFullScreen", function (res) {
+            document.getElementById('my-video').requestFullscreen();
+        });
+    }
+</script>
+</body>
+</html>
